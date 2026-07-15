@@ -17,7 +17,7 @@
         <button class="uploadbt bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
          upload file
         </button>
-        <div class="pop hidden fixed tip-0 left-0 h-full w-full flex items-center justify-center">'
+        <div class="pop hidden fixed tip-0 left-0 h-full w-full flex items-center justify-center">
             
             <form action="/upload" method="POST" enctype="multipart/form-data">
             
@@ -46,13 +46,13 @@
 <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 <script>
     
-    const button = document.querySelector('button');
+
     const pop = document.querySelector('.pop');
     const close = document.querySelector('.close');
     const uploadbt = document.querySelector('.uploadbt');
 
 
-    button.addEventListener('click', () => {
+    uploadbt.addEventListener('click', () => {
         pop.classList.remove('hidden');
         uploadbt.classList.add('hidden');
     });

@@ -21,6 +21,7 @@
     "flowbite": "^4.0.2",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.7.4",
+    "multer": "^2.2.0",
     "tailwindcss": "^4.3.2"
   }
 }
