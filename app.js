@@ -4,10 +4,13 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const connectDB = require("./config/db");
+connectDB();
 const cookieParser = require("cookie-parser");
 
-connectDB();
+
 const app = express();
+const indexRoutes = require("./routes/index.route");
+app.use("/", indexRoutes);
 
 
 app.set("view engine", "ejs");
