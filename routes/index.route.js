@@ -1,9 +1,10 @@
 const express = require('express');
 const upload = require('../config/multer.config');
 
+const authMiddleware = require('../middleware/auth');    
 const router = express.Router();
 
-router.get('/home',(req,res) => {
+router.get('/home', authMiddleware, (req, res) => {
     res.render("Home")
 });
 

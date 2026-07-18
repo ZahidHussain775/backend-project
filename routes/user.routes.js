@@ -6,6 +6,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 
+
 router.get("/register", (req, res) => {
   res.render("register");
 });
@@ -91,10 +92,7 @@ const token = jwt.sign({
 
     res.cookie("token", token)
 
-        res.send("Login successful");
-
-});
-
-
+    res.redirect("/home");
+})
 
 module.exports = router;
